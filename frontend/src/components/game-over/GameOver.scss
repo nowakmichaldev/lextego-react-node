@@ -1,0 +1,51 @@
+.game-over-container {
+  @apply w-full h-full flex flex-col justify-center items-center gap-4;
+
+  &-title {
+    @apply text-2xl font-bold text-black;
+  }
+
+  &-image {
+    @apply w-[250px] h-[250px] md:w-[350px] md:h-[350px];
+    @apply border-4 border-black shadow-square relative;
+
+    img {
+      @apply w-full h-full;
+      @apply object-cover absolute top-0 left-0 right-0 bottom-0;
+    }
+
+    button {
+      @apply w-fit h-fit;
+      @apply bg-white text-black font-bold py-2 px-4 shadow-square;
+      @apply absolute top-0 bottom-0 left-0 right-0 m-auto;
+      @apply cursor-pointer transition-all duration-300 ease-in-out;
+
+      &:hover {
+        @apply bg-black text-white;
+      }
+    }
+  }
+
+  &-footer {
+    @apply flex flex-row justify-center items-center gap-4;
+    @apply w-full;
+
+    a, button {
+      @apply w-fit h-fit border-4 border-black;
+      @apply bg-white text-black font-bold py-2 px-4 shadow-square;
+      @apply cursor-pointer transition-all duration-300 ease-in-out;
+
+      &:hover {
+        @apply bg-black text-white;
+
+        svg {
+          fill: white;
+        }
+      }
+
+      svg {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.quizes-container {
+  @apply w-full md:w-[92%] h-full flex flex-col justify-start items-start gap-4 overflow-y-auto;
+
+  &-banner {
+    @apply flex flex-row justify-start items-start gap-4 w-full flex-wrap md:flex-nowrap;
+    @apply border-4 border-black p-2 shadow-square;
+
+    a {
+      @apply min-w-fit min-h-fit;
+    }
+
+    img {
+      @apply w-56 h-56 object-cover;
+    }
+
+    p {
+      @apply text-xs md:text-sm text-black m-0 flex flex-col justify-start items-start gap-4;
+
+      span {
+        @apply text-lg font-bold w-full;
+      }
+    }
+  }
+
+  &-quiz {
+    @apply w-full flex flex-row justify-start items-start gap-4;
+    @apply border-4 border-black p-8 transition-all duration-300 ease-in-out;
+
+    &:hover {
+      @apply bg-black text-white shadow-square;
+    }
+  }
+}

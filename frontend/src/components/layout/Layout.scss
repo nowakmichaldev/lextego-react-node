@@ -1,0 +1,52 @@
+.layout {
+  &-container {
+    @apply w-full h-full bg-white flex flex-col justify-start items-start p-2 gap-4;
+  }
+
+  &-header {
+    @apply w-full px-2 py-4 bg-white shadow-square;
+    @apply border-4 border-black;
+    @apply flex flex-row justify-between items-center gap-2 flex-wrap;
+
+    &-title {
+      @apply text-2xl font-bold text-black;
+    }
+
+    &-buttons {
+      @apply flex flex-row justify-end items-center;
+
+      &-line {
+        @apply hidden md:block w-px h-8 bg-black;
+      }
+
+      a {
+        @apply bg-white flex flex-col justify-center items-center;
+        @apply mx-2 text-center;
+
+        &:hover {
+          @apply bg-black text-white;
+        }
+
+        span {
+          @apply text-xs underline;
+        }
+      }
+    }
+  }
+
+  &-content {
+    @apply w-full h-screen flex flex-row justify-start items-start gap-4;
+
+    &-left {
+      @apply w-1/4 h-full hidden md:block;
+    }
+
+    &-right {
+      @apply w-full md:w-3/4 h-[calc(100%-10rem)] md:h-[calc(100%-7rem)];
+    }
+  }
+}
+
+.center-content {
+  @apply w-full flex flex-col justify-center items-center gap-4;
+}
